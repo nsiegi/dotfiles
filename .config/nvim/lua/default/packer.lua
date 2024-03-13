@@ -32,6 +32,7 @@ return require("packer").startup(function(use)
     use { "smiteshp/nvim-navic", requires = {"neovim/nvim-lspconfig"} } -- Plugin that allows to use statusline and topline of neo vim
     use { "utilyre/barbecue.nvim", after = "nvim-web-devicons", config = function () require("barbecue").setup({ theme = "catppuccin-frappe" }) end } -- Breadcrumbs
     use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons" }, config = function () require("lualine").setup({}) end }  -- Statusbar at bottom
+    use { 'jrop/jq.nvim' }
 
     use { "christoomey/vim-tmux-navigator" } -- Tmux seemless integration
 
