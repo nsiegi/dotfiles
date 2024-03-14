@@ -29,7 +29,7 @@ return require("packer").startup(function(use)
     use { "j-hui/fidget.nvim", config = function () require("fidget") .setup({}) end } -- Notifications widget
     use { "smjonas/inc-rename.nvim", config = function () require("inc_rename").setup() end } -- Allow to rename symbol definitions
     use { "folke/neodev.nvim", config = function() require("neodev").setup() end } -- Documentation for lua lang
-    use { "smiteshp/nvim-navic", requires = {"neovim/nvim-lspconfig"} } -- Plugin that allows to use statusline and topline of neo vim
+    use { "smiteshp/nvim-navic", requires = {"neovim/nvim-lspconfig"}, config = function () require("nvim-navic").setup({}) end } -- Plugin that allows to use statusline and topline of neo vim
     use { "utilyre/barbecue.nvim", after = "nvim-web-devicons", config = function () require("barbecue").setup({ theme = "catppuccin-frappe" }) end } -- Breadcrumbs
     use { "nvim-lualine/lualine.nvim", requires = { "nvim-tree/nvim-web-devicons" }, config = function () require("lualine").setup({}) end }  -- Statusbar at bottom
     use { 'jrop/jq.nvim' }
