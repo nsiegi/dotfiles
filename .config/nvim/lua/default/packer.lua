@@ -36,12 +36,12 @@ return require("packer").startup(function(use)
 
     use { "christoomey/vim-tmux-navigator" } -- Tmux seemless integration
 
-    use { "williamboman/mason.nvim" } -- UI packages manager
+    use { "williamboman/mason.nvim", config = function () require("mason").setup() end } -- UI packages manager
     use { "williamboman/mason-lspconfig.nvim" }
 
     -- Debugging
     use { "mfussenegger/nvim-dap" }
-    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" }, config = function () require("dapui").setup() end }
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
 
     -- Autocompletion
     use { "neovim/nvim-lspconfig" } -- Manager for lsp servers
