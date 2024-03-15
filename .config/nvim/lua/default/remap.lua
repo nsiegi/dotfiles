@@ -1,6 +1,6 @@
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "[P]roject [V]iew" })
+vim.keymap.set("n", "<leader>pv", ":NvimTreeToggle<CR>", { desc = "[P]roject [V]iew" })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Selected Line Up" })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Selected Line Down" })
 vim.keymap.set({ "n", "v" }, "<leader>y", "\"+y", { desc = "[Y]ank Selected Into OS Clipboard" })
