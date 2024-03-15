@@ -14,3 +14,5 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]c
 
 vim.keymap.set("n", "<leader>rn", ":IncRename ", { desc = "[R]e[n]ame" })
 
+vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "[G]o [G]it" })
+
