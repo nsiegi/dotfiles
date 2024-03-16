@@ -10,6 +10,7 @@ vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle, { desc = "[U]ndo Tree" 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "[G]oto [D]efinition" })
 vim.keymap.set("n", "gr", vim.lsp.buf.references, { desc = "[G]oto [R]eferences" })
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
+vim.keymap.set("n", "W", ":w<CR>", { desc = "Write File" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
 
 vim.keymap.set("n", "<leader>rn", ":IncRename ", { desc = "[R]e[n]ame" })

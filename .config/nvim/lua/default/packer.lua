@@ -55,6 +55,7 @@ return require("packer").startup(function(use)
     use { "hrsh7th/cmp-nvim-lsp-signature-help" }
     use { "l3mon4d3/luasnip" }
     use { "saadparwaiz1/cmp_luasnip" }
+    use { "rafamadriz/friendly-snippets" }
     use { "hrsh7th/nvim-cmp" }
 end)
 

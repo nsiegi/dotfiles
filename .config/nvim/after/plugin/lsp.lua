@@ -9,6 +9,7 @@ mason_lsp.setup({
     ensure_installed = ensure_installed
 })
 
+require("luasnip.loaders.from_vscode").lazy_load()
 cmp.setup({
     completion = {
         completeopt = "menu,menuone,noinsert",
@@ -19,6 +20,10 @@ cmp.setup({
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
+    },
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
         ["C-b"] = cmp.mapping.scroll_docs(-4),
