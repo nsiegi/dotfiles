@@ -3,7 +3,7 @@ local cmp_nvim_lsp = require("cmp_nvim_lsp")
 local mason_lsp = require("mason-lspconfig")
 local lspconfig = require("lspconfig")
 
-local ensure_installed = { "lua_ls", "phpactor", "volar", "pyright", "tsserver", "svelte", "sqlls" }
+local ensure_installed = { "lua_ls", "phpactor", "volar", "pyright", "tsserver", "svelte", "sqlls", "gopls", "cssls" }
 
 mason_lsp.setup({
     ensure_installed = ensure_installed
