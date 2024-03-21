@@ -1,6 +1,6 @@
 require('nvim-treesitter.configs').setup({
     ensure_installed = {
-        "lua", "javascript", "php", "python", "vue", "svelte", "phpdoc", "yaml"
+        "lua", "javascript", "php", "python", "vue", "svelte", "phpdoc", "yaml", "css", "scss"
     },
     sync_install = false,
     auto_install = true,
