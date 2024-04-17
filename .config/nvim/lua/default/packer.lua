@@ -61,6 +61,12 @@ return require("packer").startup(function(use)
     use { "kristijanhusak/vim-dadbod-completion" }
     use { "kristijanhusak/vim-dadbod-ui" }
 
+    -- Comment out code
+    use { "tpope/vim-commentary" }
+
+    -- Surround tool
+    use { "tpope/vim-surround" }
+
     -- Autocompletion
     use { "neovim/nvim-lspconfig" } -- Manager for lsp servers
     use { "hrsh7th/cmp-nvim-lsp" }
