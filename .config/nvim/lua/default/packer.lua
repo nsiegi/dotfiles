@@ -24,7 +24,7 @@ return require("packer").startup(function(use)
     use { "nvim-telescope/telescope-packer.nvim", requires = { "nvim-telescope/telescope.nvim" } } -- Packer extension ofr Telescope
 
     use { "kdheepak/lazygit.nvim", require = { "nvim-lua/plenary.nvim" } }
-    use { "nvim-tree/nvim-tree.lua", config = function () require("nvim-tree").setup({ view = { width = 45, preserve_window_proportions = true } }) end }
+    use { "nvim-tree/nvim-tree.lua", config = function () require("nvim-tree").setup({ view = { width = 45 } }) end }
 
     use { "nvim-tree/nvim-web-devicons", config = function () require('nvim-web-devicons').setup({}) end } -- Popular font with icons
     use { "prichrd/netrw.nvim", config = function() require("netrw").setup({ use_devicons = true }) end } -- Default file tree view
