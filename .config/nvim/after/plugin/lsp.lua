@@ -20,6 +20,7 @@ cmp.setup({
         { name = "luasnip" },
         { name = "buffer" },
         { name = "path" },
+        { name = "vim-dadbod-completion" },
     },
     window = {
         completion = cmp.config.window.bordered(),

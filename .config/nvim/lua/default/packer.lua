@@ -24,13 +24,20 @@ return require("packer").startup(function(use)
     use { "nvim-telescope/telescope-packer.nvim", requires = { "nvim-telescope/telescope.nvim" } } -- Packer extension ofr Telescope
 
     use { "kdheepak/lazygit.nvim", require = { "nvim-lua/plenary.nvim" } }
-    use { "nvim-tree/nvim-tree.lua", config = function () require("nvim-tree").setup() end }
+    use { "nvim-tree/nvim-tree.lua", config = function () require("nvim-tree").setup({ view = { width = 45, preserve_window_proportions = true } }) end }
 
     use { "nvim-tree/nvim-web-devicons", config = function () require('nvim-web-devicons').setup({}) end } -- Popular font with icons
     use { "prichrd/netrw.nvim", config = function() require("netrw").setup({ use_devicons = true }) end } -- Default file tree view
     use { "mbbill/undotree", config = function() require("which-key").setup({}) end } -- Tree with change history
     use { "j-hui/fidget.nvim", config = function () require("fidget") .setup({}) end } -- Notifications widget
-    use { "smjonas/inc-rename.nvim", config = function () require("inc_rename").setup() end } -- Allow to rename symbol definitions
+    use { "smjonas/inc-rename.nvim", config = function () require("inc_rename").setup({
+        cmd_name = "IncRename", -- the name of the command
+        hl_group = "Substitute", -- the highlight group used for highlighting the identifier's new name
+        preview_empty_name = false, -- whether an empty new name should be previewed; if false the command preview will be cancelled instead
+        show_message = true, -- whether to display a `Renamed m instances in n files` message after a rename operation
+        input_buffer_type = nil, -- the type of the external input buffer to use (the only supported value is currently "dressing")
+        post_hook = nil, -- callback to run after renaming, receives the result table (from LSP handler) as an argument
+    }) end } -- Allow to rename symbol definitions
     use { "folke/neodev.nvim", config = function() require("neodev").setup() end } -- Documentation for lua lang
     use { "smiteshp/nvim-navic", requires = {"neovim/nvim-lspconfig"}, config = function () require("nvim-navic").setup({}) end } -- Plugin that allows to use statusline and topline of neo vim
     use { "utilyre/barbecue.nvim", after = "nvim-web-devicons", config = function () require("barbecue").setup({ theme = "catppuccin-frappe" }) end } -- Breadcrumbs
@@ -45,6 +52,14 @@ return require("packer").startup(function(use)
     -- Debugging
     use { "mfussenegger/nvim-dap" }
     use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } }
+    use { "nvim-neotest/nvim-nio" }
+
+    use { "folke/noice.nvim", requires = { "MunifTanjim/nui.nvim", "rcarriga/nvim-notify" }, config = function() require("noice").setup() end }
+
+    -- Database manager
+    use { "tpope/vim-dadbod" }
+    use { "kristijanhusak/vim-dadbod-completion" }
+    use { "kristijanhusak/vim-dadbod-ui" }
 
     -- Autocompletion
     use { "neovim/nvim-lspconfig" } -- Manager for lsp servers
