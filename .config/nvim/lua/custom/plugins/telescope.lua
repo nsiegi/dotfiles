@@ -7,28 +7,28 @@ return {
         "nvim-tree/nvim-web-devicons",
         "folke/todo-comments.nvim",
     },
-    config = function ()
+    config = function()
         local telescope = require("telescope")
         local builtin = require("telescope.builtin")
 
         telescope.setup({
             defaults = {
                 file_ignore_patterns = { "node_modules" },
-                path_display = { "truncate" }
+                path_display = { "truncate" },
             },
             pickers = {
                 find_files = {
                     hidden = true,
-                    file_ignore_patterns = { ".git" }
+                    file_ignore_patterns = { ".git" },
                 },
                 file_browser = {
-                    hidden = true
+                    hidden = true,
                 },
                 buffers = {
                     theme = "dropdown",
                     initial_mode = "normal",
-                    sorting_strategy = "descending"
-                }
+                    sorting_strategy = "descending",
+                },
             },
         })
 
@@ -42,6 +42,11 @@ return {
         vim.keymap.set("n", "<leader>gd", builtin.lsp_definitions, { desc = "LSP: [G]oto [D]efinition" })
         vim.keymap.set("n", "<leader>gr", builtin.lsp_references, { desc = "LSP: [G]oto [R]eferences" })
         vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols, { desc = "LSP: [D]ocument [S]ymbols" })
-        vim.keymap.set("n", "<leader>ws", builtin.lsp_dynamic_workspace_symbols, { desc = "LSP: [W]orkspace [S]ymbols" })
-    end
+        vim.keymap.set(
+            "n",
+            "<leader>ws",
+            builtin.lsp_dynamic_workspace_symbols,
+            { desc = "LSP: [W]orkspace [S]ymbols" }
+        )
+    end,
 }

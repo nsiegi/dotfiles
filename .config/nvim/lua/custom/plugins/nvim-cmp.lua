@@ -46,7 +46,7 @@ return {
             }),
             -- sources for autocompletion
             sources = cmp.config.sources({
-                { name = "nvim_lsp"},
+                { name = "nvim_lsp" },
                 { name = "luasnip" }, -- snippets
                 { name = "buffer" }, -- text within current buffer
                 { name = "path" }, -- file system paths
@@ -65,15 +65,15 @@ return {
         cmp.setup.cmdline({ "/", "?" }, {
             mapping = cmp.mapping.preset.cmdline(),
             sources = {
-                { name = "buffer" }
-            }
+                { name = "buffer" },
+            },
         })
         cmp.setup.cmdline(":", {
             mapping = cmp.mapping.preset.cmdline(),
             sources = cmp.config.sources({
                 { name = "path" },
                 { name = "cmdline" },
-            })
+            }),
         })
     end,
 }

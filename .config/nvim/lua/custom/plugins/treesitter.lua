@@ -12,7 +12,16 @@ return {
         -- configure treesitter
         treesitter.setup({
             ensure_installed = {
-                "lua", "javascript", "php", "python", "svelte", "phpdoc", "yaml", "css", "scss"
+                "lua",
+                "javascript",
+                "typescript",
+                "php",
+                "python",
+                "svelte",
+                "phpdoc",
+                "yaml",
+                "css",
+                "scss",
             },
             modules = {},
             ignore_install = {},
@@ -30,8 +39,8 @@ return {
             -- enable indentation
             indent = { enable = true },
             incremental_selection = {
-                enable = true
-            }
+                enable = true,
+            },
         })
-    end
+    end,
 }
