@@ -13,7 +13,6 @@ vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Hover Documentation" })
 vim.keymap.set("n", "W", ":w<CR>", { desc = "Write File" })
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[C]ode [A]ction" })
 
-vim.keymap.set("n", "<leader>rn", ":IncRename ", { desc = "[R]e[n]ame" })
-
+vim.keymap.set("n", "<leader>is", ":! isort %<CR>", { desc = "[I]mport [S]ort (isort cli)" })
 vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { desc = "[G]o [G]it" })
-
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })

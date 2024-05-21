@@ -1,15 +1,5 @@
 local cmp = require("cmp")
-local cmp_nvim_lsp = require("cmp_nvim_lsp")
-local mason_lsp = require("mason-lspconfig")
-local lspconfig = require("lspconfig")
 
-local ensure_installed = { "lua_ls", "phpactor", "volar", "pyright", "tsserver", "svelte", "sqlls", "gopls", "cssls" }
-
-mason_lsp.setup({
-    ensure_installed = ensure_installed
-})
-
-require("luasnip.loaders.from_vscode").lazy_load()
 cmp.setup({
     completion = {
         completeopt = "menu,menuone,noinsert",
@@ -51,18 +41,3 @@ cmp.setup.cmdline(":", {
         { name = "cmdline" },
     })
 })
-
-local capabilities = cmp_nvim_lsp.default_capabilities()
-
-for _, value in ipairs(ensure_installed) do
-    lspconfig[value].setup({capabilities = capabilities})
-end
-
-lspconfig.lua_ls.settings = {
-    Lua = {
-        diagnostics = {
-            globals = {"vim"}
-        }
-    }
-}
-
