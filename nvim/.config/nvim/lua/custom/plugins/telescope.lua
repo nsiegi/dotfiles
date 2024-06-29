@@ -33,6 +33,7 @@ return {
         })
 
         telescope.load_extension("fzf")
+        telescope.load_extension("noice")
 
         vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Telescope: [F]ind [F]iles" })
         vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope: [F]ind [B]uffers" })

@@ -3,6 +3,7 @@ vim.cmd("let g:netrw_liststyle = 3")
 -- disable netrw at the very start
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.g.background = "light"
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -13,7 +14,7 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.number = true
-vim.opt.relativenumber  = true
+vim.opt.relativenumber = true
 vim.opt.syntax = "ON"
 vim.opt.scrolloff = 10
 vim.opt.termguicolors = true

@@ -1,0 +1,31 @@
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
+shell = "/opt/homebrew/bin/tmux"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 15.0
+
+[font.bold]
+family = "RobotoMono Nerd Font Mono"
+style = "Bold"
+
+[font.bold_italic]
+family = "RobotoMono Nerd Font Mono"
+style = "Bold Italic"
+
+[font.italic]
+family = "RobotoMono Nerd Font Mono"
+style = "Italic"
+
+[font.normal]
+family = "RobotoMono Nerd Font Mono"
+style = "Regular"
+
+[window]
+startup_mode = "Maximized"
+decorations = "Buttonless"
+opacity = 0.9
