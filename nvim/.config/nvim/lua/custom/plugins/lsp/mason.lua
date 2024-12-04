@@ -18,7 +18,7 @@ return {
                 "phpactor",
                 "volar",
                 "pyright",
-                "tsserver",
+                "ts_ls",
                 "svelte",
                 "sqlls",
                 "gopls",

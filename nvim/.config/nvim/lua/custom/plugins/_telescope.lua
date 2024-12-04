@@ -43,6 +43,8 @@ return {
         vim.keymap.set("n", "<leader>gd", builtin.lsp_definitions, { desc = "LSP: [G]oto [D]efinition" })
         vim.keymap.set("n", "<leader>gr", builtin.lsp_references, { desc = "LSP: [G]oto [R]eferences" })
         vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols, { desc = "LSP: [D]ocument [S]ymbols" })
+        vim.keymap.set("n", "<leader>f.", builtin.oldfiles, { desc = "Telescope: [F]ind Recent Files" })
+        vim.keymap.set("n", "<leader>fr", builtin.resume, { desc = "Telescope: [F]ind [R]esume" })
         vim.keymap.set(
             "n",
             "<leader>ws",

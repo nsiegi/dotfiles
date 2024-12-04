@@ -1,7 +1,4 @@
-import = [
-  "~/.config/alacritty/catppuccin-mocha.toml"
-]
-shell = "/opt/homebrew/bin/tmux"
+# shell = "/opt/homebrew/bin/tmux"
 
 [env]
 TERM = "xterm-256color"
@@ -28,4 +25,9 @@ style = "Regular"
 [window]
 startup_mode = "Maximized"
 decorations = "Buttonless"
-opacity = 0.9
+opacity = 0.98
+
+[general]
+import = [
+  "~/.config/alacritty/catppuccin-mocha.toml"
+]
