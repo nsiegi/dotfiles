@@ -8,6 +8,12 @@ return {
         lualine.setup({
             sections = {
                 lualine_x = {
+                    function()
+                        if vim.fn.reg_recording() == "" then
+                            return ""
+                        end
+                        return "Recording @" .. vim.fn.reg_recording()
+                    end,
                     {
                         lazy_status.updates,
                         cond = lazy_status.has_updates,
