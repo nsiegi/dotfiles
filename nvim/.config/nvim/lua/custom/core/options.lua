@@ -27,6 +27,12 @@ vim.opt.timeout = false
 vim.opt.updatetime = 250
 vim.opt.timeoutlen = 300
 
+-- Folding options
+vim.opt.foldlevel = 15
+vim.opt.foldcolumn = "1"
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
+
 -- Sets how neovim will display certain whitespace in the editor.
 --  See `:help "list"`
 --  and `:help "listchars"`
