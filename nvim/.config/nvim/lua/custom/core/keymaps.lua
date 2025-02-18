@@ -10,4 +10,7 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent selected and keep selection" })
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "[Y]ank Selected Into OS Clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "[P]aste Selected From OS Clipboard" })
 
+-- Open lazygit in separate tmux window below editor
+vim.keymap.set("n", "<leader>gg", ":!tmux splitw -c " .. vim.fn.getcwd() .. " -- lazygit \\; resize-pane -Z<CR>", { silent = true })
+
 vim.keymap.set({ "i" }, "C", "C")
