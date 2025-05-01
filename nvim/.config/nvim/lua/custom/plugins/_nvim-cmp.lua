@@ -26,7 +26,7 @@ return {
 
         cmp.setup({
             completion = {
-                completeopt = "menu,menuone,preview,noselect",
+                -- completeopt = "menu,menuone,preview,noselect",
             },
             snippet = { -- configure how nvim-cmp interacts with snippet engine
                 expand = function(args)
@@ -50,6 +50,7 @@ return {
                 { name = "luasnip" }, -- snippets
                 { name = "buffer" }, -- text within current buffer
                 { name = "path" }, -- file system paths
+                { name = "neorg" }
             }),
 
             -- configure lspkind for vs-code like pictograms in completion menu
