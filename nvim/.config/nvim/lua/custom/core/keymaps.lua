@@ -1,4 +1,5 @@
 vim.g.mapleader = " "
+vim.g.maplocalleader = ","
 
 vim.keymap.set({ "n", "v" }, "<Space>", "<NOP>")
 vim.keymap.set("n", "W", ":wa<CR>", { desc = "[W]rite All Files", silent = true })
@@ -12,5 +13,5 @@ vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "[P]aste Selected From
 
 -- Open lazygit in separate tmux window below editor
 vim.keymap.set("n", "<leader>gg", ":!tmux splitw -c " .. vim.fn.getcwd() .. " -- lazygit \\; resize-pane -Z<CR>", { silent = true })
-
-vim.keymap.set({ "i" }, "C", "C")
+-- Open yazi in separate tmux window below editor
+vim.keymap.set("n", "<leader>gy", ":!tmux splitw -c " .. vim.fn.getcwd() .. " -- yazi \\; resize-pane -Z<CR>", { silent = true })
