@@ -11,6 +11,12 @@ vim.keymap.set("v", ">", ">gv", { desc = "Indent selected and keep selection" })
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "[Y]ank Selected Into OS Clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "[P]aste Selected From OS Clipboard" })
 
+-- Gitsigns
+vim.keymap.set("n", "<leader>hP", ":Gitsigns preview_hunk<CR>", { desc = "Gitsigns: [P]review [H]unk", silent = true })
+vim.keymap.set("n", "<leader>hR", ":Gitsigns reset_hunk<CR>", { desc = "Gitsigns: [H]unk [R]eset", silent = true })
+vim.keymap.set("n", "<leader>hn", ":Gitsigns next_hunk<CR>", { desc = "Gitsigns: [H]unk [N]ext", silent = true })
+vim.keymap.set("n", "<leader>hp", ":Gitsigns prev_hunk<CR>", { desc = "Gitsigns: [H]unk [P]revious", silent = true })
+
 -- Open lazygit in separate tmux window below editor
 vim.keymap.set("n", "<leader>gg", ":!tmux splitw -c " .. vim.fn.getcwd() .. " -- lazygit \\; resize-pane -Z<CR>", { silent = true })
 -- Open yazi in separate tmux window below editor
