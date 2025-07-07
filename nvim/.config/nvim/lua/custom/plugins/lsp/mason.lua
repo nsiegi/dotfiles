@@ -2,6 +2,7 @@ return {
     "williamboman/mason.nvim",
     dependencies = {
         "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
         "WhoIsSethDaniel/mason-tool-installer.nvim",
     },
     opts = {},
@@ -16,7 +17,6 @@ return {
             ensure_installed = {
                 "lua_ls",
                 "phpactor",
-                "volar",
                 "pyright",
                 "ts_ls",
                 "svelte",

@@ -20,6 +20,11 @@ vim.opt.scrolloff = 10
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 vim.opt.fillchars = "eob: "
+vim.opt.cpoptions = ">"
+
+-- Case insensitive search
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 -- Disable leader timeout
 vim.opt.timeout = false
