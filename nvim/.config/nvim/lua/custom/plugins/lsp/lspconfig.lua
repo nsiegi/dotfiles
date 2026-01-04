@@ -6,13 +6,7 @@ return {
         { "antosha417/nvim-lsp-file-operations", config = true },
     },
     config = function()
-        local mason_lspconfig = require("mason-lspconfig")
-        mason_lspconfig.setup({
-            automatic_enable = true
-        })
-
-        local lspconfig = require('lspconfig')
-        lspconfig.lua_ls.setup {
+        vim.lsp.config("lua_ls", {
             settings = {
                 Lua = {
                     runtime = {
@@ -37,7 +31,8 @@ return {
                     },
                 },
             },
-        }
+        })
+        vim.lsp.enable("lua_ls")
         vim.api.nvim_create_autocmd("LspAttach", {
             group = vim.api.nvim_create_augroup("UserLspConfig", {}),
             callback = function(ev)

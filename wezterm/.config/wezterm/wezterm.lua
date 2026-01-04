@@ -10,12 +10,12 @@ wezterm.on("gui-startup", function(cmd)
   window:gui_window():maximize()
 end)
 
-config.default_prog = { "/opt/homebrew/bin/tmux", "attach" }
+-- config.default_prog = { "/opt/homebrew/bin/tmux", "new", "-A", "-s", "main" }
 
 config.font = wezterm.font("RobotoMono Nerd Font Mono")
 config.font_size = 15
 
-config.color_scheme = "catppuccin-frappe"
+config.color_scheme = "Catppuccin Mocha"
 
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"

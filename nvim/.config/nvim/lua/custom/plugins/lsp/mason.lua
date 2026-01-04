@@ -14,6 +14,7 @@ return {
         mason.setup()
 
         mason_lspconfig.setup({
+            automatic_enable = true,
             ensure_installed = {
                 "lua_ls",
                 "phpactor",
@@ -33,6 +34,7 @@ return {
                 "black", -- python formatter
                 "pylint",
                 "eslint_d",
+                "rust_analyzer",
             },
         })
     end,
